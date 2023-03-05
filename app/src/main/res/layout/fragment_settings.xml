@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.settings.SettingsFragment">
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_chat_wallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_setting"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:paddingVertical="18dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/chat_wallpaper"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:drawableLeftCompat="@drawable/chat_wallpaper_icon"
+            app:drawableRightCompat="@drawable/more_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle" />
+
+        <View
+            android:id="@+id/view_divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="56dp"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_chat_wallpaper" />
+
+        <TextView
+            android:id="@+id/tv_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_setting"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:paddingVertical="18dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/font"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:drawableLeftCompat="@drawable/font_icon"
+            app:drawableRightCompat="@drawable/more_icon"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_1" />
+
+        <View
+            android:id="@+id/view_divider_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="56dp"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_font" />
+
+        <TextView
+            android:id="@+id/tv_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_setting"
+            android:clickable="true"
+            android:drawablePadding="12dp"
+            android:focusable="true"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:paddingVertical="18dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:drawableLeftCompat="@drawable/privacy_policy_icon"
+            app:drawableRightCompat="@drawable/more_icon"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_2" />
+
+        <View
+            android:id="@+id/view_divider_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="56dp"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_privacy_policy" />
+
+        <TextView
+            android:id="@+id/tv_rate_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_setting"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:paddingVertical="18dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/rate_app"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:drawableLeftCompat="@drawable/rate_app_icon"
+            app:drawableRightCompat="@drawable/more_icon"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_3" />
+
+        <View
+            android:id="@+id/view_divider_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="56dp"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_rate_app" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_setting"
+            android:clickable="true"
+            android:drawablePadding="12dp"
+            android:focusable="true"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:paddingVertical="18dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/feedback"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:drawableLeftCompat="@drawable/chat_wallpaper_icon"
+            app:drawableRightCompat="@drawable/more_icon"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_4" />
+
+        <View
+            android:id="@+id/view_divider_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="56dp"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toBottomOf="@id/tv_feedback" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

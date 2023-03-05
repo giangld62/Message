@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:background="@drawable/ripple_effect"
+            android:id="@+id/iv_back"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:padding="13dp"
+            android:src="@drawable/back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:gravity="center"
+            android:text="@string/font"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginStart="24dp"
+            android:id="@+id/rv_font"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

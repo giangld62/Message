@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        applicationId "vn.tapbi.message"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "default"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    productFlavors {
+        product {
+            dimension "default"
+        }
+        dev {
+            dimension "default"
+            applicationId = 'vn.tapbi.message'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    /*Core*/
+    implementation libraries.androidAppCopmpat
+    implementation libraries.multidex
+    implementation libraries.ktxCore
+    /*UI*/
+    implementation libraries.androidxNavigationKtx
+    implementation libraries.androidUICommon
+    implementation libraries.materialDesign
+    implementation libraries.hilt
+    kapt libraries.hiltKpt
+    annotationProcessor libraries.hiltAP
+
+    /*Database ( if use Room) */
+    implementation libraries.room
+    implementation libraries.roomRxjava
+    annotationProcessor libraries.roomKpt
+    kapt libraries.roomAP
+
+    implementation libraries.glide
+    annotationProcessor libraries.glideAP
+
+    implementation libraries.timberLog
+    implementation 'androidx.preference:preference-ktx:1.2.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'androidx.room:room-ktx:2.4.2'
+}

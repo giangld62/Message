@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.new_message.NewMessageFragment">
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:gravity="center"
+            android:text="@string/new_message"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ripple_effect"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="@string/cancel"
+            android:textColor="@color/blue_1"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            app:layout_constraintBottom_toTopOf="@id/edt_contact_search"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_2"/>
+        <View
+            app:layout_constraintTop_toBottomOf="@id/edt_contact_search"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_2"/>
+
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:text="@string/to"
+            android:textColor="@color/gray"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle"/>
+
+        <EditText
+            android:id="@+id/edt_contact_search"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="40dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_to"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle" />
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel_icon"
+            app:layout_constraintTop_toTopOf="@id/edt_contact_search"
+            app:layout_constraintBottom_toBottomOf="@id/edt_contact_search"
+            app:layout_constraintEnd_toEndOf="@id/edt_contact_search"
+            android:layout_marginEnd="12dp"
+            android:id="@+id/iv_cancel"
+            />
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_recipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_search"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:drawableRightCompat="@drawable/cancel_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_contact_search"
+            app:layout_constraintStart_toEndOf="@id/tv_to"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            android:paddingVertical="12dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/edt_new_message"
+            app:layout_constraintTop_toBottomOf="@id/tv_to" />
+
+        <EditText
+            android:id="@+id/edt_new_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_edt_new_message"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:hint="@string/message"
+            android:maxLines="5"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_send"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_send"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ripple_effect"
+            android:padding="8dp"
+            android:src="@drawable/send_icon"
+            app:layout_constraintBottom_toBottomOf="@id/edt_new_message"
+            app:layout_constraintTop_toTopOf="@id/edt_new_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_new_message"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

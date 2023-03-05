@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="12dp">
+
+    <TextView
+        android:id="@+id/tv_contact_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:maxLines="1"
+        android:paddingHorizontal="24dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User Name" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_contact_name" />
+
+    <View
+        android:id="@+id/view_rv"
+        android:background="#00ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/rv_messages"
+        app:layout_constraintBottom_toBottomOf="@id/rv_messages"/>
+
+    <TextView
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/tv_show_more"
+        android:background="@drawable/ripple_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/blue_1"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/rv_messages"
+        android:text="@string/show_more"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

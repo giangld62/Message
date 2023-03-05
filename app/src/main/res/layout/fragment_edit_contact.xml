@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/ripple_effect"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="@color/blue_1"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/ripple_effect"
+            android:enabled="false"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/done"
+            android:textColor="@color/gray_2"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_cancel" />
+
+        <TextView
+            android:id="@+id/tv_add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/ripple_effect"
+            android:fontFamily="@font/sf_pro_text_semibold"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/add_image"
+            android:textColor="@color/blue_1"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_2"
+            app:layout_constraintTop_toTopOf="@id/edt_user_name" />
+
+        <EditText
+            android:inputType="text"
+            android:id="@+id/edt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="#00000000"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:hint="@string/enter_user_name"
+            android:maxLines="1"
+            android:paddingStart="24dp"
+            android:paddingEnd="56dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_image"
+            tools:text="@string/user_name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:background="@color/gray_2"
+            app:layout_constraintBottom_toTopOf="@id/edt_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/edt_user_name" />
+
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/edt_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:backgroundTint="#00000000"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:gravity="start|center"
+            android:hint="@string/enter_phone_number"
+            android:maxLines="1"
+            android:paddingStart="24dp"
+            android:paddingEnd="56dp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/edit_text_cursor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_user_name"
+            tools:text="Phone Number" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_2"
+            app:layout_constraintBottom_toBottomOf="@id/edt_phone_number" />
+
+        <ImageView
+            android:id="@+id/iv_cancel_user_name"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="48dp"
+            android:padding="16dp"
+            android:src="@drawable/cancel_icon"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_image" />
+
+        <ImageView
+            android:id="@+id/iv_cancel_phone_number"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="16dp"
+            android:src="@drawable/cancel_icon"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_user_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
